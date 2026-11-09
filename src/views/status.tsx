@@ -1,4 +1,10 @@
-import type { Status } from '../status.js';
+import type { NightCounts, Status } from '../status.js';
+
+function countsText(counts: NightCounts | null): string {
+  // Unreadable night (styleguide): missing data renders as `—`, never dropped.
+  if (counts === null) return 'ok — · retry — · fail —';
+  return `ok ${counts.ok} · retry ${counts.retry} · fail ${counts.fail}`;
+}
 
 export function StatusBoard({ status }: { status: Status }) {
   return (
@@ -20,7 +26,11 @@ export function StatusBoard({ status }: { status: Status }) {
       ) : (
         <ul>
           {status.nights.map((n) => (
-            <li>{n}</li>
+            <li>
+              <a href={`/digest/${n}`}>{n}</a>
+              {' · '}
+              <span class="mute">{countsText(status.counts[n] ?? null)}</span>
+            </li>
           ))}
         </ul>
       )}
