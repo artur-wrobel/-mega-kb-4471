@@ -32,13 +32,6 @@ export type DigestRow = {
   lastAt: string;
 };
 
-/**
- * Reads `runs/<night>.jsonl` into one `DigestRow` per job, sorted by job.
- * A line that doesn't parse is counted, never thrown: the night still
- * renders. A night with no file is the caller's 404, not this reader's.
- *
- * Signature only — implemented by issue #4.
- */
-export function readNight(runsDir: string, night: string): DigestRow[] {
-  throw new Error(`readNight(${runsDir}, ${night}): not implemented (issue #4)`);
-}
+// The reader lives in read.ts (issue #4); re-exported here so section 2
+// builds against this one module. Docs travel with the implementation.
+export { NightNotFound, readNight } from './read.js';
