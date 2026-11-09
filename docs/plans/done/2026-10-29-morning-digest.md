@@ -1,6 +1,7 @@
 ---
 plan: morning-digest
-status: ready
+status: done
+closed: 2026-11-09
 owner: rook
 opened: 2026-10-29
 ---
@@ -77,3 +78,14 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+- [#3 Digest types: src/digest/types.ts](https://github.com/artur-wrobel/-mega-kb-4471/issues/3) — closed
+- [#4 Run log reader: readNight over runs/<night>.jsonl](https://github.com/artur-wrobel/-mega-kb-4471/issues/4) — closed
+- [#5 Digest page: GET /digest/:night](https://github.com/artur-wrobel/-mega-kb-4471/issues/5) — closed
+- [#6 Digest JSON: GET /api/digest/:night](https://github.com/artur-wrobel/-mega-kb-4471/issues/6) — closed
+- [#7 Board link: each night links to its digest](https://github.com/artur-wrobel/-mega-kb-4471/issues/7) — closed
+- [#8 Route tests for the digest page and JSON](https://github.com/artur-wrobel/-mega-kb-4471/issues/8) — closed
+- [#9 Preview for review: public link to the digest page](https://github.com/artur-wrobel/-mega-kb-4471/issues/9) — closed
+- [#10 Clean up: take the lane marker off the preview](https://github.com/artur-wrobel/-mega-kb-4471/issues/10) — closed
